@@ -63,7 +63,7 @@ class CoinSeller:
                     symbol=f'{COIN}USDT')
                 price = (round(float(check['result']['bidPrice']) * COEFFICIENT, 4))
                 logger.info(f'Best price found: {price}')
-                if MIN_PRICE > price:
+                if MIN_PRICE >= price:
                     continue
                 await self.sell_tokens(price, balance)
                 no_orders = False
