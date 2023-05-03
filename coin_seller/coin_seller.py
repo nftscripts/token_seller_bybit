@@ -61,7 +61,7 @@ class CoinSeller:
                 logger.info('Looking for the best price...')
                 check = self.session_auth.best_bid_ask_price(
                     symbol=f'{COIN}USDT')
-                price = (round(float(check['result']['bidPrice']) * COEFFICIENT, 4))
+                price = (round(float(check['result']['bidPrice']) * COEFFICIENT, 3))
                 logger.info(f'Best price found: {price}')
                 if MIN_PRICE >= price:
                     continue
