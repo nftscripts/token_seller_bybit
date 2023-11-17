@@ -1,4 +1,4 @@
-# Bot for fast selling SUI after listing
+# Bot for fast selling any token after listing
 
 The bot sells through limit orders, because there is no possibility to sell on the market right after the listing.
 
